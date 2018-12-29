@@ -1,8 +1,8 @@
 FROM alpine:3.7
 MAINTAINER Bitbucket Pipelines
 
-ARG VERSION
-ENV AWS_CLI_VERSION=$VERSION
+#ARG VERSION
+ENV AWS_CLI_VERSION
 
 RUN apk --update --no-cache add \
     python \
