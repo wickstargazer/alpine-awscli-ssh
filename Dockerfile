@@ -18,7 +18,7 @@ RUN apk --update --no-cache add \
     curl \
     py-setuptools \
     rsync \
-    openssh
+    openssh \
     && pip install --no-cache-dir awscli==$AWS_CLI_VERSION \
     && apk del py-pip \
     && rm -rf /var/cache/apk/* /root/.cache/pip/*
