@@ -2,7 +2,7 @@ FROM alpine:3.7
 MAINTAINER Bitbucket Pipelines
 
 #ARG VERSION
-ENV AWS_CLI_VERSION
+#ENV AWS_CLI_VERSION
 
 RUN apk --update --no-cache add \
     python \
@@ -19,7 +19,7 @@ RUN apk --update --no-cache add \
     py-setuptools \
     rsync \
     openssh \
-    && pip install --no-cache-dir awscli==$AWS_CLI_VERSION \
+    && pip install --no-cache-dir awscli \
     && apk del py-pip \
     && rm -rf /var/cache/apk/* /root/.cache/pip/*
 
